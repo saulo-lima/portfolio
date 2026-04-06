@@ -57,3 +57,24 @@ nav#menu a:hover {
   background-color:  var(--destaque-inverso);
   color: var(--destaque);
 }
+
+main {
+
+
+}
+
+section#ficha {
+  background-color: var(--fundo-card);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+section#ficha img.foto {
+  width: 200px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  overflow: hidden;
+   border-radius: 50%;
+   border: 5px solid var(--fundo-card);
+   outline: 5px solid var(--destaque) ;
+}
