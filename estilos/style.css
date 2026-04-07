@@ -30,6 +30,15 @@ body {
   color: var(--texto);
 }
 
+body.escuro {
+    --fundo-principal: #222222;
+  --texto: #e0e0e0;
+  --texto-inverso: #333333;
+  --destaque:#0077ff;
+  --destaque-inverso:#66a3ff;
+  --fundo-card: #444444;
+}
+
 header {
   display: flex;
   justify-content: flex-end;
