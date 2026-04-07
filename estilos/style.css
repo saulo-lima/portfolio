@@ -37,6 +37,9 @@ header {
   background-color: var(--destaque);
   color: var(--texto);
   padding: 10px;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
 }
 
 nav#menu ul {
@@ -203,7 +206,7 @@ div.curso {
 a.bt {
   grid-area: 2 / 2 / 3 / 3;
   margin-right: 10px;
-  justify-self: end;
+  justify-self: start;
   text-decoration: none;
   padding: 10px;
   border-radius: 8px;
