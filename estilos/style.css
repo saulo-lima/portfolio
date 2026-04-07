@@ -172,7 +172,7 @@ article h2 {
 
 div.curso {
   display: grid;
-  grid-template-columns: 70% 1fr;
+  grid-template-columns: 60% 1fr;
   grid-template-rows: repeat(3, 1fr);
   background-color: var(--fundo-principal);
   border-radius: 8px;
@@ -205,7 +205,6 @@ div.curso {
 
 a.bt {
   grid-area: 2 / 2 / 3 / 3;
-  margin-right: 10px;
   justify-self: start;
   text-decoration: none;
   padding: 10px;
@@ -260,12 +259,36 @@ footer {
   padding: 15px;
   
 }
+@media screen and (min-width:500px) {
+  
+a.bt {
+  justify-self: flex-end;
+  margin-right: 20px;
+}
+  
+}
+
 @media screen and (min-width: 768px) {
+
+  main {
+    grid-template-columns: auto 300px 1fr auto;
+  }
+
+  section#ficha {
+    grid-column: 2 / 2;
+    height: fit-content;
+    position: sticky;
+    top: 65px;
+  }
+
+  section#detalhes {
+    grid-column: 3 / 4;
+  }
 
   #skill-container {
     grid-template-columns: 1fr 1fr;
   }
-  
+
   #projeto-container .projeto {
     flex-direction: row-reverse;
     justify-content: space-between;
