@@ -137,6 +137,17 @@ article h2 {
   margin-bottom: 20px ;
 }
 
+h2 > a {
+   text-decoration: none;
+   color:  var(--destaque);
+   margin-left: 20px;
+   transition: .3s;
+}
+
+h2 > a:hover {
+  color: var(--destaque-inverso);
+}
+
 div.head{
   display: flex;
   flex-direction: row;
