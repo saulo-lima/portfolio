@@ -231,7 +231,7 @@ div.curso {
   background-color: var(--fundo-principal);
   border-radius: 8px;
   border-left: 5px solid var(--destaque-inverso);
-  padding: 20px;
+  padding: 20px 30px;
   transition: .5s;
 }
 
