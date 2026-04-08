@@ -137,61 +137,90 @@ article h2 {
   margin-bottom: 20px ;
 }
 
-#skill-container {
-  display: grid;
-  grid-template-columns: 1fr; 
-  gap: 30px;
-}
-
-#skill-container  .info {
+div.head{
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  align-items: center;
-}
-
-#skill-container  .nome {
-  font-weight: bold;
-  color: var(--texto);
-}
-
-#skill-container .porcent {
-  font-weight: bold;
-  color: var(--destaque);
+  margin-bottom: 50px;
 
 }
 
-#skill-container .barra {
+.custom-select {
+  width: 200px;
+  position: relative;
+  font-size: 0.95em;
+}
+
+/* caixa principal */
+.selected {
+  background: var(--fundo-card);
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 2px solid var(--destaque);
+  transition: .3s;
+}
+
+/* hover */
+.selected:hover {
+  border-color: var(--destaque-inverso);
+}
+
+/* dropdown */
+.options {
+  display: none;
+  position: absolute;
   width: 100%;
-  height: 8px;
-  background-color:var(--fundo-principal) ;
-  border-radius: 4px;
+  background: var(--fundo-card);
+  border-radius: 8px;
+  margin-top: 5px;
+  padding: 5px;
+  border: 2px solid var(--destaque);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  z-index: 10;
 }
 
-#skill-container .progresso {
-  height: 100%;
-  background-color: var(--destaque-inverso);
-  border-radius: 4px;
+.options label {
+  display: block;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: .2s;
 }
 
-a.hypertitle{
-  text-decoration: none;
-  color: var(--destaque);
+.options label:hover {
+  background: var(--destaque-inverso);
+}
+
+/* abrir dropdown */
+.custom-select.active .options {
+  display: block;
+}
+
+/* classe usada no filtro */
+.oculto {
+  display: none;
+}
+
+.selected::after {
+  content: "▼";
+  float: right;
+  font-size: 0.8em;
 }
 
 #formacao-container {
-  display: flex;
-  flex-direction: column-reverse;
-  gap: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
 }
 
 div.curso {
-  display: grid;
-  grid-template-columns: 60% 1fr;
-  grid-template-rows: repeat(3, 1fr);
   background-color: var(--fundo-principal);
   border-radius: 8px;
   border-left: 5px solid var(--destaque-inverso);
-  padding-left: 15px;
+  padding: 20px;
   transition: .5s;
 }
 
@@ -200,28 +229,15 @@ div.curso {
   cursor: pointer;
 }
 
-#formacao-container .periodo {
-  grid-area: 1/ 1 / 2 / 2;
-  font-size: 0.8em;
-  font-weight: bold;
-  color: var(--texto);
-}
-#formacao-container .instituicao {
-  grid-area: 2/ 1 / 3 / 2;
-  color: var(--destaque-inverso);
-  padding: 10px;
-  font-size: 1.1em;
-}
 
-#formacao-container .titulacao {
-  grid-area: 3/ 1 / 4 / 2;
-}
 
 a.bt {
-  grid-area: 2 / 2 / 3 / 3;
-  justify-self: start;
+  display: block;
   text-decoration: none;
+  width: 105px;
+  text-align: center;
   padding: 10px;
+  margin-top: 15px;
   border-radius: 8px;
   background-color: var(--destaque);
   color: var(--texto-inverso);
@@ -233,34 +249,6 @@ a.bt {
   color: var(--texto);
 }
 
-#projeto-container{
-  display: flex;
-  flex-direction: column-reverse;
-  gap: 20px;
-}
-
-#projeto-container .projeto {
-    display: flex;
-  flex-direction: column;
-  gap: 15px;
-  background-color: var(--fundo-principal);
-  padding: 10px;
-  border-radius: 8px;
-  border-left: 5px solid var(--destaque-inverso);
-  transition: .5s;
-}
-
-#projeto-container .projeto:hover {
-  border-left: 15px solid var(--destaque);
-  cursor: pointer;
-} 
-
-#projeto-container .projeto .foto {
-  width: 100%;
-  aspect-ratio: 16/9;
-  overflow: hidden;
-  border-radius: 8px;
-}
 
 .pd {
   margin-bottom: 20px;
@@ -273,10 +261,11 @@ footer {
   padding: 15px;
   
 }
+
 @media screen and (min-width:500px) {
   
 a.bt {
-  justify-self: flex-end;
+  margin-top: 50px;
   margin-right: 20px;
 }
   
@@ -298,23 +287,8 @@ a.bt {
   section#detalhes {
     grid-column: 3 / 4;
   }
+  #formacao-container {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 
-  #skill-container {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  #projeto-container .projeto {
-    flex-direction: row-reverse;
-    justify-content: space-between;
-  }
-  
-  #projeto-container .projeto-info {
-    max-width: 80%;
-  }
-
-  #projeto-container .foto {
-    aspect-ratio: 1 / 1;
-    max-width: 20%;
-    max-height: 200px;
   }
 }
