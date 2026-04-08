@@ -18,8 +18,8 @@
   --fundo-principal: #f5f5f5;
   --texto: #222222;
   --texto-inverso: #ffffff;
-  --destaque:#0077ff;
-  --destaque-inverso:#66bbff;
+  --destaque: #0077ff;
+  --destaque-inverso: #66bbff;
   --fundo-card: #ffffff;
 }
 
@@ -31,11 +31,11 @@ body {
 }
 
 body.escuro {
-    --fundo-principal: #222222;
+  --fundo-principal: #222222;
   --texto: #e0e0e0;
   --texto-inverso: #333333;
-  --destaque:#0077ff;
-  --destaque-inverso:#66a3ff;
+  --destaque: #0077ff;
+  --destaque-inverso: #66a3ff;
   --fundo-card: #444444;
 }
 
@@ -52,10 +52,11 @@ header {
 }
 
 nav#menu ul {
-  list-style:none;
+  list-style: none;
   display: flex;
   gap: 10px;
 }
+
 nav#menu a {
   text-decoration: none;
   color: var(--texto-inverso);
@@ -66,13 +67,13 @@ nav#menu a {
 }
 
 nav#menu a:hover {
-  background-color:  var(--destaque-inverso);
+  background-color: var(--destaque-inverso);
   color: var(--destaque);
 }
 
 main {
   display: grid;
-  grid-template-columns:auto 90vw auto;
+  grid-template-columns: auto 90vw auto;
   gap: 20px;
   margin-top: 20px;
 }
@@ -84,20 +85,20 @@ section#ficha {
   grid-column: 2;
 }
 
-section#ficha > img.foto {
+section#ficha>img.foto {
   width: 200px;
   aspect-ratio: 1/1;
   object-fit: cover;
   overflow: hidden;
   border-radius: 50%;
   border: 5px solid var(--fundo-card);
-  outline: 5px solid var(--destaque) ;
+  outline: 5px solid var(--destaque);
   margin-bottom: 15px;
   display: block;
   margin: auto;
 }
 
-section#ficha > h1 {
+section#ficha>h1 {
   color: var(--destaque);
   margin: 15px 0;
   font-size: 1.5em;
@@ -105,12 +106,12 @@ section#ficha > h1 {
 }
 
 div#social {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   font-size: 1.6em;
-   gap: 1em;
-   margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6em;
+  gap: 1em;
+  margin-top: 15px;
 }
 
 div#social a {
@@ -121,6 +122,7 @@ div#social a {
 div#social a:hover {
   color: var(--destaque-inverso);
 }
+
 section#detalhes {
   grid-column: 2;
 }
@@ -134,22 +136,22 @@ article {
 
 article h2 {
   color: var(--destaque);
-  margin-bottom: 20px ;
+  margin-bottom: 20px;
 }
 
 #skill-container {
   display: grid;
-  grid-template-columns: 1fr; 
+  grid-template-columns: 1fr;
   gap: 30px;
 }
 
-#skill-container  .info {
+#skill-container .info {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-#skill-container  .nome {
+#skill-container .nome {
   font-weight: bold;
   color: var(--texto);
 }
@@ -163,7 +165,7 @@ article h2 {
 #skill-container .barra {
   width: 100%;
   height: 8px;
-  background-color:var(--fundo-principal) ;
+  background-color: var(--fundo-principal);
   border-radius: 4px;
 }
 
@@ -173,7 +175,7 @@ article h2 {
   border-radius: 4px;
 }
 
-a.hypertitle{
+a.hypertitle {
   text-decoration: none;
   color: var(--destaque);
 }
@@ -206,6 +208,7 @@ div.curso {
   font-weight: bold;
   color: var(--texto);
 }
+
 #formacao-container .instituicao {
   grid-area: 2/ 1 / 3 / 2;
   color: var(--destaque-inverso);
@@ -228,19 +231,19 @@ a.bt {
   transition: .5s;
 }
 
- a.bt:hover {
+a.bt:hover {
   background-color: var(--destaque-inverso);
   color: var(--texto);
 }
 
-#projeto-container{
+#projeto-container {
   display: flex;
   flex-direction: column-reverse;
   gap: 20px;
 }
 
 #projeto-container .projeto {
-    display: flex;
+  display: flex;
   flex-direction: column;
   gap: 15px;
   background-color: var(--fundo-principal);
@@ -253,7 +256,7 @@ a.bt {
 #projeto-container .projeto:hover {
   border-left: 15px solid var(--destaque);
   cursor: pointer;
-} 
+}
 
 #projeto-container .projeto .foto {
   width: 100%;
@@ -271,15 +274,16 @@ footer {
   color: var(--texto-inverso);
   text-align: center;
   padding: 15px;
-  
+
 }
+
 @media screen and (min-width:500px) {
-  
-a.bt {
-  justify-self: flex-end;
-  margin-right: 20px;
-}
-  
+
+  a.bt {
+    justify-self: flex-end;
+    margin-right: 20px;
+  }
+
 }
 
 @media screen and (min-width: 768px) {
@@ -307,7 +311,7 @@ a.bt {
     flex-direction: row-reverse;
     justify-content: space-between;
   }
-  
+
   #projeto-container .projeto-info {
     max-width: 80%;
   }
