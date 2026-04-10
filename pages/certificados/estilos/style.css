@@ -83,8 +83,13 @@ div.certificado {
     padding: 30px 10px;
 }
 
+div.certificado  > a > i {
+  font-size: 30px;
+  color: black;
+}
+
 div.certificado > img {
-    width: 90%;
+    width: 80%;
     display: block;
     margin: auto;
 }
